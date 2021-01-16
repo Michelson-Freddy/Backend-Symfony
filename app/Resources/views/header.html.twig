@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>Back office</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css/bootstrap.css')) }}" />
+        <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}" />
+        <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css/style.css')) }}" />
+         <SCRIPT LANGUAGE="JavaScript">
+				function Debute(URL, WIDTH, HEIGHT) {
+                  tempsFermeture = 10;
+				  propFenetre = "left=50,top=50,width=" +  + ",height=" + HEIGHT;
+				  pub = window.open(URL, "pub", propFenetre);
+				  if (tempsFermeture) setTimeout("pub.close();", tempsFermeture*1000);
+				}
+				function PopUp() {
+				  url = "";
+				  width = 120 // largeur du PopUp en pixels
+				  height = 70; // hauteur du PopUp en pixels
+				  delay = 4; // temps en seconde avant l’ouverture du PopUp
+				  timer = setTimeout("Debute(url, width, height)", delay*1000);
+				}
+		</script>
+         </SCRIPT>
+    </head>
+    <body>
+    {% block nav %}
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img style="margin-left: 10px;" src="{{ absolute_url(asset('img/logo.png'))}}" height="47px"/>
+                </div>
+                <div class="navbar-header">
+                    <h5 id="tempo">TEMPO ONE</h5>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+                        
+    {% block body %}{% endblock %}
+
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>    
+                        

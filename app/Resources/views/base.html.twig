@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>Login</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css/bootstrap.css')) }}" />
+        </head>
+    <body>
+                            
+    {% block body %}{% endblock %}
+
+    {% block javascripts %}{% endblock %}
+    </body>
+</html>
